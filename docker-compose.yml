@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  eureka-server:
+    image: eureka-server
+    restart: always
+    build:
+      context: .
+      dockerfile: app-eureka-server/Dockerfile
+    working_dir: /app-eureka-server
+    environment:
+      TZ: America/Sao_Paulo    
+    ports:
+      - "9091:80"
+    command: mvn spring-boot:run
+    networks:
+      - docker-network  
+networks:
+    docker-network:
+        driver: bridge
