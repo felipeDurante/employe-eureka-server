@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: EmployeeEurekaServer
+  cloud:
+    config:
+      uri: http://localhost:8080
