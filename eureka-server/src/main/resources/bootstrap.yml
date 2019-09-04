@@ -3,4 +3,4 @@ spring:
     name: EmployeeEurekaServer
   cloud:
     config:
-      uri: http://localhost:8080
+      uri: http://35.198.23.45/
