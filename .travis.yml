@@ -3,7 +3,7 @@ jdk:
   - openjdk8
 before_install:
   - sudo apt-get update
-  - cd app-eureka-server/
+  - cd eureka-server/
   - echo "Let's start Maven Package!"
   - mvn clean package
   - cd ..
@@ -15,7 +15,7 @@ before_deploy:
 deploy:
   provider: script
   script:
-    docker tag docker-config-server:latest 0biwanken0bi/eureka-server:latest;
+    docker tag eureka-server:latest 0biwanken0bi/eureka-server:latest;
     docker push 0biwanken0bi/eureka-server;
   on:
     branch: master
