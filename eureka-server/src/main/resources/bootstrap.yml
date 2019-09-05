@@ -1,6 +1,11 @@
 spring:
   application:
-    name: EmployeeEurekaServer
+    name: eureka-server
   cloud:
     config:
-      uri: http://35.198.23.45/
+#      profiles:
+#        uri: http://35.198.23.45/
+#      profile:
+        uri: http://localhost:9090
+#  profiles:
+#    active:
